@@ -518,11 +518,11 @@ Our platform is updated regularly with new listings.
 function openLinkAndPlay(event, videoUrl, smartLinkUrl) {
     event.preventDefault(); 
     
-    // បើក SmartLink ក្នុង Tab ថ្មី
-    window.open(smartLinkUrl, '_blank');
+    // ១. បើកទំព័រ player.html ក្នុង Tab ថ្មី (Browser មិនប្លុកព្រោះជា Website ផ្ទាល់ខ្លួន)
+    window.open('player.html?video=' + encodeURIComponent(videoUrl), '_blank');
     
-    // បើកទំព័រ player.html ព្រមទាំងបញ្ជូន Link វីដេអូទៅជាមួយ
-    window.location.href = 'player.html?video=' + encodeURIComponent(videoUrl);
+    // ២. ប្តូរទំព័រដើម (Current Tab) ឱ្យចូលទៅកាន់ SmartLink របស់អ្នក
+    window.location.href = smartLinkUrl;
 }
 </script>
 </body>
