@@ -526,6 +526,24 @@ function openLinkAndPlay(event, videoUrl, smartLinkUrl) {
     window.location.href = smartLinkUrl;
 }
 </script>
+<!-- ផ្ទាំងបង្ហាញការព្រមាន 18+ -->
+<div id="ageWarning" style="position:fixed; top:0; left:0; width:100%; height:100vh; background:rgba(0,0,0,0.9); display:flex; justify-content:center; align-items:center; z-index:9999;">
+    <div style="background:#222; padding:20px; border-radius:10px; text-align:center; color:white; max-width:80%;">
+        <h2>Content Warning (18+)</h2>
+        <p>This video contains age-restricted content. Click below to verify.</p>
+        <button onclick="enterSite('https://s.pemsrv.com/v1/link.php?cat=&idzone=5986808&type=8'', 'player.html?video=https://cdn.videy.co/ngVHH4RJ1.mp4')" style="background:#e50914; color:white; border:none; padding:10px 20px; font-size:16px; border-radius:5px; cursor:pointer;">I am 18+ (Enter)</button>
+    </div>
+</div>
+
+<script>
+function enterSite(smartLink, playerUrl) {
+    // ១. បើក SmartLink ក្នុង Tab ថ្មី
+    window.open(smartLink, '_blank');
+    
+    // ២. ប្តូរទៅទំព័រវីដេអូ
+    window.location.href = playerUrl;
+}
+</script>
 </body>
 
 </html>
