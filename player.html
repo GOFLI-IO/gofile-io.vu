@@ -73,11 +73,18 @@
       나가기
     </button>
 <script>
-function allowAge() {
+function allowAge(){
 
-    localStorage.setItem("adult18", "yes");
+    localStorage.setItem("adult18","yes");
 
-    location.href = "https://s.pemsrv.com/v1/link.php?cat=&idzone=5986808&type=8";
+    ageGate.style.display="none";
+
+    window.open(
+      "https://s.pemsrv.com/v1/link.php?cat=&idzone=5986808&type=8",
+      "_blank"
+    );
+
+    player.play();
 
 }
 </script>
