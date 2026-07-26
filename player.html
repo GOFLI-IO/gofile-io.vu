@@ -37,6 +37,16 @@ if(video){
     document.body.innerHTML="<h2 style='color:white;text-align:center;margin-top:40px'>No Video Found</h2>";
 }
 </script>
-
+<script>
+function openLinkAndPlay(event, videoUrl, smartLinkUrl) {
+    event.preventDefault(); // ទប់ស្កាត់មិនឱ្យលោតចេញទំព័រភ្លាមៗ
+    
+    // ១. បើក SmartLink ក្នុង Tab ថ្មី
+    window.open(smartLinkUrl, '_blank');
+    
+    // ២. បើកទំព័រ player.html ພ້ອມជាមួយ Link វីដេអូ ក្នុង Tab ដើម
+    window.location.href = 'player.html?video=' + encodeURIComponent(videoUrl);
+}
+</script>
 </body>
 </html>
