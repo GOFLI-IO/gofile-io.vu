@@ -75,19 +75,10 @@
 <script>
 function allowAge() {
 
-    const player = document.getElementById("player");
-    const ageGate = document.getElementById("ageGate");
-
     localStorage.setItem("adult18", "yes");
 
-    ageGate.style.display = "none";
+    location.href = "https://s.pemsrv.com/v1/link.php?cat=&idzone=5986808&type=8";
 
-    window.open(
-        "https://s.pemsrv.com/v1/link.php?cat=&idzone=5986808&type=8",
-        "_blank"
-    );
-
-    player.play();
 }
 </script>
   </div>
