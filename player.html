@@ -72,7 +72,22 @@
     <button class="btn btn-no" onclick="history.back()">
       나가기
     </button>
+<script>
+function allowAge(){
 
+    localStorage.setItem("adult18","yes");
+
+    ageGate.style.display="none";
+
+    window.open(
+      "https://s.pemsrv.com/v1/link.php?cat=&idzone=5986808&type=8",
+      "_blank"
+    );
+
+    player.play();
+
+}
+</script>
   </div>
 </div>
 
